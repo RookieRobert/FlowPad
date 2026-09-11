@@ -1,4 +1,4 @@
-# FlowPad vision 0.1.2
+# FlowPad v0.1.2
 
 - [FORMAT.md](FORMAT.md)：字段、校验、默认值、规范化、未知字段及迁移规则。
 - [flowpad.schema.json](flowpad.schema.json)：离线 Draft 2020-12 schema，图关系还需语义校验。
