@@ -1,0 +1,20 @@
+{
+  "name": "@flowpad/document-contract",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Frozen .flowpad v1 interchange contract; no runtime dependencies",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node tests/conformance.mjs",
+    "benchmark": "node tests/benchmark.mjs"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "typescript": "7.0.2"
+  },
+  "license": "GPL-3.0-only"
+}

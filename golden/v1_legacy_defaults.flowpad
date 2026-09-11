@@ -1,0 +1,50 @@
+{
+  "format": "flowpad",
+  "schemaVersion": 1,
+  "document": {
+    "id": "legacy-defaults",
+    "title": "未命名"
+  },
+  "canvas": {
+    "zoom": 1,
+    "center": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "a",
+      "type": "step",
+      "x": 0,
+      "y": 0,
+      "text": "缺省尺寸",
+      "width": 240,
+      "height": 104
+    },
+    {
+      "id": "b",
+      "type": "result",
+      "x": 350,
+      "y": 0,
+      "text": "缺省端口",
+      "width": 240,
+      "height": 104
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge",
+      "source": {
+        "nodeId": "a",
+        "port": "right"
+      },
+      "target": {
+        "nodeId": "b",
+        "port": "left"
+      },
+      "label": "",
+      "route": []
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "format": "flowpad",
+  "document": {
+    "id": "question-repeat",
+    "title": "示例画布"
+  },
+  "canvas": {
+    "zoom": 1,
+    "center": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "type": "goalStart",
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 104,
+      "text": "安排周末出行"
+    },
+    {
+      "id": "n1",
+      "type": "step",
+      "x": 350,
+      "y": 0,
+      "width": 240,
+      "height": 104,
+      "text": "准备水和相机"
+    },
+    {
+      "id": "n2",
+      "type": "question",
+      "x": 700,
+      "y": 0,
+      "width": 240,
+      "height": 104,
+      "text": "天气适合出门吗？"
+    },
+    {
+      "id": "n3",
+      "type": "repeat",
+      "x": 0,
+      "y": 220,
+      "width": 240,
+      "height": 104,
+      "text": "检查天气，直到可以出发"
+    },
+    {
+      "id": "n4",
+      "type": "info",
+      "x": 350,
+      "y": 220,
+      "width": 240,
+      "height": 104,
+      "text": "已知：天气预报"
+    },
+    {
+      "id": "n5",
+      "type": "result",
+      "x": 700,
+      "y": 220,
+      "width": 240,
+      "height": 104,
+      "text": "出门，享受周末"
+    },
+    {
+      "id": "n6",
+      "type": "note",
+      "x": 0,
+      "y": 440,
+      "width": 240,
+      "height": 104,
+      "text": "记得带伞"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": {
+        "nodeId": "n0",
+        "port": "right"
+      },
+      "target": {
+        "nodeId": "n2",
+        "port": "left"
+      },
+      "label": "",
+      "route": []
+    },
+    {
+      "id": "e1",
+      "source": {
+        "nodeId": "n2",
+        "port": "right"
+      },
+      "target": {
+        "nodeId": "n1",
+        "port": "left"
+      },
+      "label": "是",
+      "route": [],
+      "autoLabel": true
+    },
+    {
+      "id": "e2",
+      "source": {
+        "nodeId": "n2",
+        "port": "bottom"
+      },
+      "target": {
+        "nodeId": "n3",
+        "port": "left"
+      },
+      "label": "否",
+      "route": [],
+      "autoLabel": true
+    },
+    {
+      "id": "e3",
+      "source": {
+        "nodeId": "n3",
+        "port": "right"
+      },
+      "target": {
+        "nodeId": "n2",
+        "port": "left"
+      },
+      "label": "继续",
+      "route": [],
+      "autoLabel": true
+    },
+    {
+      "id": "e4",
+      "source": {
+        "nodeId": "n3",
+        "port": "bottom"
+      },
+      "target": {
+        "nodeId": "n5",
+        "port": "left"
+      },
+      "label": "完成",
+      "route": [],
+      "autoLabel": true
+    }
+  ]
+}

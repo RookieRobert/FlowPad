@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowpad.local/spec/v1/flowpad.schema.json",
+  "title": "FlowPad Document v1",
+  "type": "object",
+  "required": [
+    "format",
+    "schemaVersion",
+    "document",
+    "canvas",
+    "nodes",
+    "edges"
+  ],
+  "properties": {
+    "format": {
+      "const": "flowpad"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "document": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "canvas": {
+      "type": "object",
+      "properties": {
+        "zoom": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "center": {
+          "type": "object",
+          "required": [
+            "x",
+            "y"
+          ],
+          "properties": {
+            "x": {
+              "type": "number",
+              "minimum": -1000000,
+              "maximum": 1000000
+            },
+            "y": {
+              "type": "number",
+              "minimum": -1000000,
+              "maximum": 1000000
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "x",
+          "y",
+          "text"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "enum": [
+              "goalStart",
+              "step",
+              "question",
+              "repeat",
+              "info",
+              "result",
+              "note"
+            ]
+          },
+          "x": {
+            "type": "number",
+            "minimum": -1000000,
+            "maximum": 1000000
+          },
+          "y": {
+            "type": "number",
+            "minimum": -1000000,
+            "maximum": 1000000
+          },
+          "width": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 100000
+          },
+          "height": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 100000
+          },
+          "text": {
+            "type": "string"
+          },
+          "style": {
+            "description": "Opaque JSON preserved verbatim; object recommended. No shared styling semantics in v1."
+          }
+        },
+        "additionalProperties": true
+      },
+      "maxItems": 100000
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "target"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "nodeId"
+            ],
+            "properties": {
+              "nodeId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "port": {
+                "enum": [
+                  "left",
+                  "top",
+                  "right",
+                  "bottom"
+                ]
+              }
+            },
+            "additionalProperties": true
+          },
+          "target": {
+            "type": "object",
+            "required": [
+              "nodeId"
+            ],
+            "properties": {
+              "nodeId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "port": {
+                "enum": [
+                  "left",
+                  "top",
+                  "right",
+                  "bottom"
+                ]
+              }
+            },
+            "additionalProperties": true
+          },
+          "label": {
+            "type": "string"
+          },
+          "route": {
+            "description": "Opaque derived routing cache on input; writers normalize to []."
+          },
+          "autoLabel": {
+            "type": "boolean",
+            "default": false,
+            "description": "True only for application-generated default labels; label remains the backward-compatible fallback text."
+          }
+        },
+        "additionalProperties": true
+      },
+      "maxItems": 200000
+    }
+  },
+  "additionalProperties": true,
+  "description": "Frozen S8 v1 interoperable profile; FORMAT.md defines graph validation and normalization.",
+  "$defs": {
+    "interchangeJson": {
+      "anyOf": [
+        {
+          "type": [
+            "null",
+            "boolean"
+          ]
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/interchangeJson"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/interchangeJson"
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/$defs/interchangeJson"
+    }
+  ]
+}

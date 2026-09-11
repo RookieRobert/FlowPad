@@ -1,0 +1,89 @@
+{
+  "format": "flowpad",
+  "schemaVersion": 1,
+  "document": {
+    "id": "ids-loops"
+  },
+  "canvas": {
+    "zoom": 0.125
+  },
+  "nodes": [
+    {
+      "id": "__proto__",
+      "type": "step",
+      "x": 0,
+      "y": -123.5,
+      "text": "__proto__"
+    },
+    {
+      "id": "constructor",
+      "type": "step",
+      "x": 300,
+      "y": -123.5,
+      "text": "constructor"
+    },
+    {
+      "id": "toString",
+      "type": "step",
+      "x": 600,
+      "y": -123.5,
+      "text": "toString"
+    },
+    {
+      "id": "a|b",
+      "type": "step",
+      "x": 900,
+      "y": -123.5,
+      "text": "a|b"
+    },
+    {
+      "id": "🧭",
+      "type": "step",
+      "x": 1200,
+      "y": -123.5,
+      "text": "🧭"
+    },
+    {
+      "id": "",
+      "type": "step",
+      "x": 1500,
+      "y": -123.5,
+      "text": ""
+    }
+  ],
+  "edges": [
+    {
+      "id": "__proto__",
+      "source": {
+        "nodeId": "__proto__",
+        "port": "right"
+      },
+      "target": {
+        "nodeId": "__proto__",
+        "port": "top"
+      }
+    },
+    {
+      "id": "back",
+      "source": {
+        "nodeId": "constructor",
+        "port": "left"
+      },
+      "target": {
+        "nodeId": "__proto__",
+        "port": "bottom"
+      }
+    },
+    {
+      "id": "forward",
+      "source": {
+        "nodeId": "__proto__",
+        "port": "bottom"
+      },
+      "target": {
+        "nodeId": "constructor",
+        "port": "left"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "format": "flowpad",
+  "schemaVersion": 1,
+  "document": {
+    "id": "empty-document",
+    "title": "示例画布"
+  },
+  "canvas": {
+    "zoom": 1,
+    "center": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "nodes": [],
+  "edges": []
+}

@@ -1,0 +1,94 @@
+{
+  "format": "flowpad",
+  "schemaVersion": 1,
+  "document": {
+    "id": "example-troubleshoot",
+    "title": "电脑无法开机排查"
+  },
+  "canvas": {
+    "zoom": 1.0,
+    "center": {
+      "x": 320,
+      "y": 220
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "goalStart",
+      "x": 60,
+      "y": 80,
+      "width": 180,
+      "height": 64,
+      "text": "电脑无法开机"
+    },
+    {
+      "id": "n2",
+      "type": "question",
+      "x": 300,
+      "y": 80,
+      "width": 180,
+      "height": 72,
+      "text": "电源指示灯亮吗？"
+    },
+    {
+      "id": "n3",
+      "type": "step",
+      "x": 560,
+      "y": 30,
+      "width": 180,
+      "height": 64,
+      "text": "检查屏幕与显示连接"
+    },
+    {
+      "id": "n4",
+      "type": "step",
+      "x": 560,
+      "y": 150,
+      "width": 180,
+      "height": 64,
+      "text": "检查插座与电源线"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": {
+        "nodeId": "n1",
+        "port": "right"
+      },
+      "target": {
+        "nodeId": "n2",
+        "port": "left"
+      },
+      "label": "",
+      "route": []
+    },
+    {
+      "id": "e2",
+      "source": {
+        "nodeId": "n2",
+        "port": "right"
+      },
+      "target": {
+        "nodeId": "n3",
+        "port": "left"
+      },
+      "label": "是",
+      "route": []
+    },
+    {
+      "id": "e3",
+      "source": {
+        "nodeId": "n2",
+        "port": "bottom"
+      },
+      "target": {
+        "nodeId": "n4",
+        "port": "left"
+      },
+      "label": "否",
+      "route": []
+    }
+  ]
+}

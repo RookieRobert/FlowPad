@@ -1,0 +1,35 @@
+{
+  "format": "flowpad",
+  "schemaVersion": 1,
+  "document": {
+    "id": "legacy-defaults"
+  },
+  "canvas": {},
+  "nodes": [
+    {
+      "id": "a",
+      "type": "step",
+      "x": 0,
+      "y": 0,
+      "text": "缺省尺寸"
+    },
+    {
+      "id": "b",
+      "type": "result",
+      "x": 350,
+      "y": 0,
+      "text": "缺省端口"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge",
+      "source": {
+        "nodeId": "a"
+      },
+      "target": {
+        "nodeId": "b"
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "valid": [
+    "v1_auto_labels.flowpad",
+    "v1_basic.flowpad",
+    "v1_bounds_camera.flowpad",
+    "v1_empty.flowpad",
+    "v1_ids_loops.flowpad",
+    "v1_large.flowpad",
+    "v1_legacy_defaults.flowpad",
+    "v1_long_text.flowpad",
+    "v1_question_repeat.flowpad",
+    "v1_unicode.flowpad",
+    "v1_unknown_fields.flowpad"
+  ],
+  "invalid": [
+    {
+      "file": "future-version.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "missing-version.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "wrong-format.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "missing-canvas.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "empty-document-id.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "wrong-title-type.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "node-type.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "duplicate-node.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "empty-node-id.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "coordinate-type.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "coordinate-limit.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "zero-width.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "height-limit.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "text-type.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "unknown-port.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "empty-edge-id.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "missing-target.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "note-edge.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "same-port-loop.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "duplicate-edge-id.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "duplicate-connection.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "label-type.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "auto-label-type.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "zero-zoom.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "center-limit.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "center-type.flowpad",
+      "expectation": "both-reject"
+    },
+    {
+      "file": "truncated.flowpad",
+      "expectation": "both-reject"
+    }
+  ]
+}

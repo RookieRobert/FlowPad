@@ -1,0 +1,112 @@
+{
+  "format": "flowpad",
+  "schemaVersion": 1,
+  "document": {
+    "id": "ids-loops",
+    "title": "未命名"
+  },
+  "canvas": {
+    "zoom": 0.125,
+    "center": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "__proto__",
+      "type": "step",
+      "x": 0,
+      "y": -123.5,
+      "text": "__proto__",
+      "width": 240,
+      "height": 104
+    },
+    {
+      "id": "a|b",
+      "type": "step",
+      "x": 900,
+      "y": -123.5,
+      "text": "a|b",
+      "width": 240,
+      "height": 104
+    },
+    {
+      "id": "constructor",
+      "type": "step",
+      "x": 300,
+      "y": -123.5,
+      "text": "constructor",
+      "width": 240,
+      "height": 104
+    },
+    {
+      "id": "toString",
+      "type": "step",
+      "x": 600,
+      "y": -123.5,
+      "text": "toString",
+      "width": 240,
+      "height": 104
+    },
+    {
+      "id": "🧭",
+      "type": "step",
+      "x": 1200,
+      "y": -123.5,
+      "text": "🧭",
+      "width": 240,
+      "height": 104
+    },
+    {
+      "id": "",
+      "type": "step",
+      "x": 1500,
+      "y": -123.5,
+      "text": "",
+      "width": 240,
+      "height": 104
+    }
+  ],
+  "edges": [
+    {
+      "id": "__proto__",
+      "source": {
+        "nodeId": "__proto__",
+        "port": "right"
+      },
+      "target": {
+        "nodeId": "__proto__",
+        "port": "top"
+      },
+      "label": "",
+      "route": []
+    },
+    {
+      "id": "back",
+      "source": {
+        "nodeId": "constructor",
+        "port": "left"
+      },
+      "target": {
+        "nodeId": "__proto__",
+        "port": "bottom"
+      },
+      "label": "",
+      "route": []
+    },
+    {
+      "id": "forward",
+      "source": {
+        "nodeId": "__proto__",
+        "port": "bottom"
+      },
+      "target": {
+        "nodeId": "constructor",
+        "port": "left"
+      },
+      "label": "",
+      "route": []
+    }
+  ]
+}
